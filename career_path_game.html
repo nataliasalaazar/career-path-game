@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Career Path Game&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option { margin: 10px; padding: 10px; border: 2px solid #000; cursor: pointer; display: inline-block; background-color: #f8f8f8; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option:hover { background-color: #ddd; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.hidden { display: none !important; visibility: hidden; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Choose Your Career Path&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="careerChoices"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="option" onclick="selectCareer('Tech')"&gt;Tech&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="option" onclick="selectCareer('Medicine')"&gt;Medicine&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="option" onclick="selectCareer('Business')"&gt;Business&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="option" onclick="selectCareer('Arts')"&gt;Arts&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="option" onclick="selectCareer('Fashion')"&gt;Fashion&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="educationChoices" class="hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Choose Your Education Path&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="option" onclick="selectEducation('College Degree')"&gt;College Degree&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="option" onclick="selectEducation('Self-Taught')"&gt;Self-Taught&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="option" onclick="selectEducation('Trade School')"&gt;Trade School&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="option" onclick="selectEducation('Internship')"&gt;Internship/Work Experience&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="result" class="hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Your Career Outcome&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p id="outcomeText"&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let career = "";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let education = "";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function selectCareer(choice) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>career = choice;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>console.log("Selected Career:", career);<span class="Apple-converted-space">  </span>// Debugging line</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById("careerChoices").classList.add("hidden");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById("educationChoices").classList.remove("hidden");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function selectEducation(choice) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>education = choice;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>console.log("Selected Education:", education);<span class="Apple-converted-space">  </span>// Debugging line</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById("educationChoices").classList.add("hidden");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById("result").classList.remove("hidden");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>generateOutcome();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function generateOutcome() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let outcome = "";</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (education === "College Degree") {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>outcome = `You pursued a ${education} in ${career}. You have job security but also student debt.`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else if (education === "Self-Taught") {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>outcome = `You chose to be ${education} in ${career}. Your skills are strong, but breaking into the industry is harder without credentials.`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else if (education === "Trade School") {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>outcome = `You attended a ${education} and gained hands-on experience in ${career}. You find work faster with specialized skills.`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else if (education === "Internship") {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>outcome = `You took the ${education} route in ${career}. Networking helped you secure opportunities, but gaining full-time roles takes time.`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById("outcomeText").innerText = outcome;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
